@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+  <button class="navbar-toggler" type="button" (click)="navbarCollapsed = !navbarCollapsed"
+    [attr.aria-expanded]="!navbarCollapsed" aria-controls="navbarNav" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center">
+    <ul class="navbar-nav">
+      <a class="navbar-brand ml-4" routerLink="/home" href="#">Finance Charts</a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/precious-metals">Precious Metals</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/stocks">Top Stock Picks</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Misc</a>
+      </li>
+    </ul>
+  </div>
+</nav>
