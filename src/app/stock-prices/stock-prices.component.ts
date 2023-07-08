@@ -20,12 +20,14 @@ export class StockPricesComponent {
       });
   }
 
-  getLatestStockPrice() {
-    const symbol = 'AAPL'; // Example symbol, replace with your desired stock symbol
-    this.stockPriceSerice.getLatestStockPrice(symbol)
-      .subscribe((price: number) => {
-        this.latestPrice = price;
-        console.log(this.latestPrice)
-      });
-  }
+  getAAPL = this.stockPriceSerice.getLatestStockPrice('AAPL')
+  .subscribe((price: number) => {
+    this.latestPrice = price;
+  });
+
+  getSCHD = this.stockPriceSerice.getLatestStockPrice('SCHD')
+  .subscribe((price: number) => {
+    this.latestPrice = price;
+  });
+
 }
