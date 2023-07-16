@@ -4,12 +4,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { GoldChartComponent } from './Precious Metals/gold-chart/gold-chart.component';
 import { HomeComponent } from './home/home.component';
 import { StockPricesComponent } from './stock-prices/stock-prices.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 const routes: Routes = [
-  { path: 'precious-metals', component: GoldChartComponent },
   {path: 'home', component: HomeComponent},
-  {path: 'stocks', component: StockPricesComponent}
+  {path: 'precious-metals', component: GoldChartComponent},
+  {path: 'stocks', component: StockPricesComponent},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '**', component: NotFoundComponent}
   /* { path: 'second-component', component: SecondComponent }, */
 ];
 

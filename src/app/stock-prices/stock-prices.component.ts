@@ -8,26 +8,25 @@ import { StockPriceService } from './stock-price.service';
 })
 export class StockPricesComponent {
 
-  latestPrice: number | undefined;
+  latestAAPLPrice: number | undefined;
+  latestSCHDPrice: number | undefined;
 
-  constructor(private stockPriceSerice: StockPriceService) {}
+  constructor(private stockPriceSerice: StockPriceService) {
+    console.log(this.getStockDataAAPL)
+  }
 
-  getStockData() {
-    const symbol = 'AAPL'; // Example symbol, replace with your desired stock symbol
-    this.stockPriceSerice.getStockData(symbol)
+    getStockDataAAPL = this.stockPriceSerice.getStockData('AAPL')
       .subscribe((data) => {
         console.log(data); // Handle the received stock data here
       });
-  }
 
   getAAPL = this.stockPriceSerice.getLatestStockPrice('AAPL')
   .subscribe((price: number) => {
-    this.latestPrice = price;
+    this.latestAAPLPrice = price;
   });
 
   getSCHD = this.stockPriceSerice.getLatestStockPrice('SCHD')
   .subscribe((price: number) => {
-    this.latestPrice = price;
+    this.latestSCHDPrice = price;
   });
-
 }

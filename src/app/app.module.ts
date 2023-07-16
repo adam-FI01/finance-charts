@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { StockPricesComponent } from './stock-prices/stock-prices.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     SilverChartComponent,
     GoldChartComponent,
     HomeComponent,
-    StockPricesComponent
+    StockPricesComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
