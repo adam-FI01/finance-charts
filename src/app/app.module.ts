@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { StockPricesComponent } from './stock-prices/stock-prices.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { MiscellaneousComponent } from './misc/miscellaneous/miscellaneous.component';
+import { GoogleComponent } from './misc/google-maps/google.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     GoldChartComponent,
     HomeComponent,
     StockPricesComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MiscellaneousComponent,
+    GoogleComponent
   ],
   imports: [
     BrowserModule,
