@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'Precious-Metals', loadChildren: () => import('./Precious Metals/gold-chart/gold/gold-chart.module').then(m => m.GoldChartModule)},
   {path: 'Stocks', loadChildren: () => import('./stock-prices/stock-prices.module').then(m => m.StockPricesModule)},
   {path: 'Miscellaneous', loadChildren: () => import('./misc/miscellaneous/miscellaneous.module').then(m => m.MiscellaneousModule)},
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '', redirectTo: '/Home', pathMatch: 'full'},
   {path: '**', loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundModule)}
   /* { path: 'second-component', component: SecondComponent }, */
 ];

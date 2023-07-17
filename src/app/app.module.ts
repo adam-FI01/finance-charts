@@ -11,7 +11,8 @@ import { StockPricesComponent } from './stock-prices/stock-prices.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MiscellaneousComponent } from './misc/miscellaneous/miscellaneous.component';
-import { GoogleComponent } from './misc/google-maps/google.component';
+import { MapComponent } from './misc/miscellaneous/map/map.component';
+import { MarkerService } from './misc/miscellaneous/marker.service';
 
 @NgModule({
   declarations: [
@@ -23,14 +24,14 @@ import { GoogleComponent } from './misc/google-maps/google.component';
     StockPricesComponent,
     NotFoundComponent,
     MiscellaneousComponent,
-    GoogleComponent
+    MapComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [MarkerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
